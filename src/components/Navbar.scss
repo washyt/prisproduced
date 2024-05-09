@@ -1,0 +1,57 @@
+@import '../styles/colors';
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=League+Spartan:wght@100..900&display=swap');
+
+
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 40px 1rem 60px;
+  font-family: "Arimo", sans-serif; /* Ensuring font-family is consistent */
+  color: var(--nav-font-color); /* Using the custom property for font color */
+
+  .brand {
+    transform: scaleX(1.1);
+    font-weight:900; /* Adjust based on the font's available weights */
+    font-size: clamp(1.5rem, 1.9vw, 2.5rem);
+    .brand-link {
+      text-decoration: none;
+      color: inherit; /* Inherits color from NavBar */
+    }
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+    padding-right: 2em;
+
+    li a {
+      text-decoration: none;
+      font-size: clamp(0.8rem, 2.5vw, 1.4rem);
+      color: inherit; /* Inherits color from NavBar */
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .instagram-link {
+
+    .instagram-logo {
+      width: clamp(20px, 1vw, 40px);
+      height: clamp(20px, 1vw, 40px);
+      fill: var(--nav-font-color); /* Inherits color from NavBar */
+    }
+  }
+}
+
+/* Example additional classes to change font color */
+.color-work { --nav-font-color: #{$white}; background-color: #{$green};}
+.color-about { --nav-font-color: #{$brown}; background-color: #{$white};}
+.color-contact { --nav-font-color: $green; }

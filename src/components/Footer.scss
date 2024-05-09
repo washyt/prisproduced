@@ -1,0 +1,22 @@
+@import '../styles/colors';
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=League+Spartan:wght@100..900&display=swap');
+
+.footer-container{
+    font-family: "Arimo", sans-serif; /* Ensuring font-family is consistent */
+    height: 120px;
+    background-color: $white;
+    color:$brown;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    font-weight: bolder;
+    transform: scaleX(1.1);
+    h1, a{
+        font-size: 1.8em;
+        
+    }
+    a{
+        text-decoration: underline;
+    }
+}

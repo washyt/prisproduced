@@ -1,0 +1,30 @@
+@import '../styles/colors';
+
+.main-tab-work{
+    background-color: $green;
+    width:100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction:column;
+    text-align:center;
+    justify-content:center;
+    color: $white;
+    font-size: clamp(20px, 2.7vw, 50px);
+    h1 {
+        // Style your <h1> tags as needed
+        text-align: center;
+        margin: 0; // Removes default margin if desired
+        transform: scaleX(1.15);
+        padding: 5px 0; // Adds padding for visual spacing
+      }
+
+
+    
+}
+
+  h1 {
+    // Style your <h1> tags as needed
+    text-align: center;
+    margin: 0; // Removes default margin if desired
+    padding: 10px 0; // Adds padding for visual spacing
+  }

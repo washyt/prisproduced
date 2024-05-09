@@ -1,0 +1,82 @@
+@import '../styles/colors';
+
+.total-wrapper{
+    width: 100vw;
+    height:80vh;
+    background-color: $white;
+
+}
+.contact-container {
+    display: flex;
+    align-items: center;
+    background-color: $white;
+    justify-content: center;
+    max-width:80%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto; // Center the container
+  
+    .title {
+      align-self: flex-start; // Aligns the title to the right of the flex container
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      width: calc(100% - 40px); // 100% width of the container minus the padding
+    }
+  
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 50%; // Adjust based on your preference
+      padding: 30px;
+      background-color: #E5E0DA;
+      @media (max-width: 768px) {
+        max-width: 100%; // On smaller screens, the form can take up the full container width
+      }
+  
+      .form-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+  
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr; // Stack the input fields in one column on mobile
+        }
+  
+        input,
+        textarea {
+          border: 1px solid #000;
+          padding: 10px;
+          margin-bottom: 1rem;
+  
+          &:required {
+            box-shadow: none;
+          }
+  
+          &:focus {
+            outline: none;
+            border-color: #000;
+          }
+        }
+  
+        textarea {
+          grid-column: 1 / -1; // Textarea spans all columns
+          height: 150px;
+        }
+  
+        button {
+          grid-column: 1 / -1; // Button spans all columns
+          background-color: #000;
+          color: #fff;
+          padding: 10px 20px;
+          border: none;
+          cursor: pointer;
+  
+          &:hover {
+            background-color: darken(#000, 10%);
+          }
+        }
+      }
+    }
+  }
+  

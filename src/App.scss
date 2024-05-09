@@ -1,0 +1,19 @@
+@import './styles/colors';
+
+// theme colors//
+// green - 7E7B46 //
+// white - DBD6CB //
+/* App.scss - Styles for vertically stacked contact form */
+
+/* Overall form styling */
+
+
+.NavWrapper {
+  font-size: clamp(16px, 2vw, 24px); /* Adjusts between 16px and 24px */
+}
+
+
+/* Apply navbar text color using a custom property */
+.Navbar {
+  color: var(--navbar-text-color);
+}

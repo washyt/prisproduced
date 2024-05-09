@@ -1,0 +1,55 @@
+@import '../styles/colors';
+.grid-container {
+  background-color:$white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // Creates a 3-column layout
+  grid-gap: 20px; // Sets the gap between grid items
+  padding: 60px; // Adds padding around the grid
+  box-sizing: border-box; // Includes padding in the element's total dimensions
+  
+  // Assuming the viewport width is divided into 3 parts for columns and considering grid-gap,
+  // we calculate the width of each column to be (100vw - 40px - 2 * grid-gap) / 3
+  // For height, similar consideration is applied, but we also ensure images fit the desired aspect ratio.
+  
+  img {
+    width: calc((100vw - 120px - 60px) / 3); // Adjusts each image's width to be one-third of the viewport width minus padding and gaps
+    height: auto; // Adjusts each image's height to be two-fifths of the viewport height minus padding
+    object-fit: cover; // Ensures images cover the specified area without distorting their aspect ratio
+  }
+
+  // Adjusts to a 2-column layout for smaller screens
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Switches to a 2-column layout on smaller screens
+    img {
+      width: calc((100vw - 40px - 20px) / 2); // Adjusts width for 2-column layout
+      height: calc((100vh - 40px) * 2 / 5); // Keeps the same height
+    }
+  }
+}
+
+.spacer{
+  width:100vw;
+  height:60px;
+  background-color: $white;
+}
+
+.bottom-link-editorial{
+  max-width:100vw;
+  height: 150px;
+  font-family: "Arimo", sans-serif; /* Ensuring font-family is consistent */
+  font-size: 60px;
+  color: $white;
+  background-color: $white;
+  display: flex;
+  justify-content:flex-end;
+  left: 30px;
+  align-items: center;
+  a{
+    padding-right:80px;
+    transform:scaleX(1.1);
+    font-weight: bolder;
+    text-decoration: none;
+    color: $brown;
+
+  }
+}
